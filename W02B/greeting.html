@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en-us">
+    <head>
+        <title>Nathan Reeve</title>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, intitial-scale=1">
+        <meta name="author" content="Nathan Reeve">
+        <meta name="description" content="W02 form assignment for Nathan Reeve
+        in CIT 160: Introduction to programming at Brigham Yount University - Idaho">
+    </head>
+
+    <script>
+        /* Defining Table
+         * Input: A person's name
+         * Processing: Create a greeting for that person
+         * Output: The greeting
+         */
+        function greetUser() {
+            // This line prompts the user to type in his name.
+            let sign = prompt("Please enter your sign");
+        
+            // Create a personalized greeting for the user.
+            let greeting = "You are a " + sign + ".  I hope you are well today.";
+        
+            // The next line causes the computer to display
+            // a greeting to the user in a popup window.
+            alert(greeting);
+        }
+        </script>
+        </head>
+        
+        <body>                                      
+            <button type="button" onclick="greetUser()">Hello</button>
+        </body>
+        </html>

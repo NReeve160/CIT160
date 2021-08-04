@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en-us">
+    <head>
+        <title>Nathan Reeve</title>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, intitial-scale=1">
+        <meta name="author" content="Nathan Reeve">
+        <meta name="description" content="W02 form assignment for Nathan Reeve
+        in CIT 160: Introduction to programming at Brigham Yount University - Idaho">
+    </head><script>
+        /* Defining Table
+         * Input: A person's name
+         * Processing: Create a verse of scripture for that person
+         * Output: The scripture
+         */
+        function applyScripture() {
+            // Get the user's name from the text field that has the id
+            // of "nameInputBox" and store it in a variable named name.
+            let name = document.getElementById('nameInputBox').value;
+        
+            // Use string concatenation to create a verse
+            // of scripture personalized for the user.
+            let scripture = name + " shall put their trust in God shall be" +
+                " supported in " + "their trials, and their troubles, and " +
+                "their afflictions, and " + name + "shall be lifted up at the "
+                + "last day";
+        
+            // Display the scripture in the div that has the id "outputDiv".
+            document.getElementById('outputDiv').innerHTML = scripture;
+        }
+        </script>
+        </head>
+        
+        <body>                             
+        Please enter your name: <input type="text" id="nameInputBox">    
+        <button type="button" onclick="applyScripture()">Verse</button>
+        <div id="outputDiv"></div>
+        </body>       
+        </html>
