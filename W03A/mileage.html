@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en-us">
+    <head>
+        <title>Nathan Reeve</title>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, intitial-scale=1">
+        <meta name="author" content="Nathan Reeve">
+        <meta name="description" content="W03 quarts to liters assignment for Nathan Reeve
+        in CIT 160: Introduction to programming at Brigham Yount University - Idaho">
+    </head>
+
+<script>
+    /* Input: Begining Odometer and Endindg Odometert of Gallons of Gasoline used
+     * Processing: Calculate gas mileage.
+     * Output: mpg
+     */
+    function mpg() {
+        // Get the Begining OD, Ending OD, and Gasoline Used from the user.
+        let b = parseFloat(document.getElementById('beginingOD').value);
+        let e = parseFloat(document.getElementById('endingOD').value);
+        let g = parseFloat(document.getElementById('gasUsed').value);
+    
+        // Compute the mpg.
+        let mpg = (e - b) / g;
+    
+        // Display the mpg to the user.
+        document.getElementById('outputDiv').innerHTML = mpg;
+    }
+    </script>
+    </head>
+    
+    <body>
+    Begining Odometer: <input type="text" id="beginingOD"><br>  
+    Ending Odometer: <input type="text" id="endingOD"><br>
+    Gasoline Used: <input type="text" id="gasUsed"><br>
+
+    <button type="button" onclick="mpg()">Miles Per Gallon</button>  
+    <div id="outputDiv"></div>  
+    </body>
+    </html>

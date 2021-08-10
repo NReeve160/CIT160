@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en-us">
+    <head>
+        <title>Nathan Reeve</title>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, intitial-scale=1">
+        <meta name="author" content="Nathan Reeve">
+        <meta name="description" content="W03 quarts to liters assignment for Nathan Reeve
+        in CIT 160: Introduction to programming at Brigham Yount University - Idaho">
+    </head>
+
+    <script>
+        /* Input: amount of liquid in quarts
+         * Processing: convert quarts into liters
+         * Output: amount of liquid in liters
+         */
+        function quartsToLiters() {
+            // Read a Celsius temperature from the user.
+            let text = document.getElementById('quartsInputBox').value;
+        
+            // Convert what the user typed from text into a number.
+            let q = parseFloat(text);
+        
+            // Convert the Celsius temperature into Fahrenheit.
+            let l = q * 0.0946353;
+        
+            // Display the Fahrenheit temperature to the user.
+            document.getElementById('litersDiv').innerHTML = l;
+        }
+        </script>
+        </head>
+        
+        <body>                               
+        Enter amount in quarts: <input type="text" id="quartsInputBox">
+        <button type="button" onclick="quartsToLiters()">Convert</button>
+        <div id="litersDiv"></div>                     
+        </body>            
+        </html>
