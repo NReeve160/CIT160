@@ -1,0 +1,60 @@
+<!DOCTYPE HTML>
+<html lang="en-us">
+<head>
+<meta charset="utf-8">
+<title>Test your Math Skills</title>
+<script>
+
+    /* Input: n1, mathmatical operator, n2
+     * Processing: convert n1 and n2 into output using mathamtic operator
+     * Output: r
+     */
+     function math() {
+        // get n1, operator, n2
+        let n1 = parseFloat(document.getElementById('n1').value);
+        let operator = document.getElementById(operator).value;
+        let n2 = parseFloat(document.getElementById('n2').value);
+        let r = parseFloat(document.getElementById('r').value);
+     
+        // select operator
+        let o;
+        if (operator == '+') {
+            o = n1 + n2;
+        }
+        else if (operator == '-') {
+            o = n1 - n2;
+        }
+        else if (operator == '/') {
+            o = n1 / n2;
+        }
+        else if (operator == '*') {
+            o = n1 * n2;
+        }
+        else {
+            o = 0;
+        }
+
+        // compare user result with correct result
+        let result;
+        if (r = o) {
+            result = 'Correct! Good Job!';
+        }
+        else {
+            result = 'Inorrect! Try again!'
+        }
+
+        // Display result
+        document.getElementById('result').innerHTML = o;
+        }
+
+</script>
+</head>
+
+<body style="display: inline;">
+    <h1>Test Your Math Skills!</h1>
+    <input type="text" id="n1"> <input type="text" id="operator"> <input id="n2">
+    = <input type="text" id="r"> <br>
+    <button type="button" onclick="math()">Check</button><br>
+    <div id="result"></div>
+</body>
+</html>

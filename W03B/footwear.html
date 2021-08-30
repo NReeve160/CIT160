@@ -1,0 +1,44 @@
+<!DOCTYPE HTML>
+<html lang="en-us">
+<head>
+<meta charset="utf-8">
+<title>Footwear</title>
+<script>
+
+    /* Input: Weather
+     * Processing: Depending on selected weather 
+     * Output: Selected footwear
+     */
+     function footwear() {
+        // get the weather
+        let i = document.getElementById('weather').value;
+     
+        // select which footwear to wear
+        let f;
+        if (i == "hot") {
+            f = "sandals";
+        }
+        else if (i == "rain") {
+            f = "galoshes";
+        }
+        else if (i == "snow") {
+            f = "boots";
+        }
+        else {
+            f = "shoes";
+        }
+
+        // Display the footwear.
+        document.getElementById('footwear').innerHTML = f;
+        }
+
+</script>
+</head>
+
+<body>
+    <h1>Select Footwear</h1>
+    Weather <input type="text" id="weather">
+    <button type="button" onclick="footwear()">Footwear</button><br>
+    Footwear: <span id="footwear"></span>
+</body>
+</html>
