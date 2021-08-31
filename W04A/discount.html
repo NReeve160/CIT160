@@ -1,0 +1,43 @@
+<!DOCTYPE HTML>
+<html lang="en-us">
+<head>
+<meta charset="utf-8">
+<title>Discount</title>
+<script>
+
+    /* Input: Get cost of user sale
+     * Processing: Check if Wednesday or Tuesday then add
+     * sales tax and discount
+     * Output: Total Cost
+     */
+    function sale() {
+        var dayOfWeek = new Date().getDay();
+        let cost = parseFloat(document.getElementById('cost').value);
+
+        let c;
+        let total;
+        if (dayOfWeek == 2 || dayOfWeek == 3) {
+            c = cost * .10;
+            total = c + (cost * .06)
+        }
+        else {
+            total = cost + (cost *.06);
+        }
+        
+        let s = total.toFixed(2);
+
+        // Display the result.
+        document.getElementById('result').innerHTML = s;
+    }
+
+</script>
+</head>
+
+<body>
+    <h1>Welcome to retail!</h1>
+    <h2>If today is Tuesday or Wednesday we will give you a 10% discount!</h2>
+    Cost: <input type="text" id="cost">
+    <button onclick="sale()">Calculate</button>
+    <span id="result"></span>
+</body>
+</html>
