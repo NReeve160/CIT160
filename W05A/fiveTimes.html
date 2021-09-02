@@ -1,0 +1,38 @@
+<!DOCTYPE HTML>
+<html lang="en-us">
+<head>
+<meta charset="utf-8">
+<title>Five Times</title>
+<script>
+
+    /* Input: none
+     * Processing: Loop should multiply i by 5 and display to the user
+     * Output: display 5 * x where x is multiples of 1-12
+     */
+    function fiveTimes() {
+
+        let output = '5';
+
+
+        for (let i = 1; i < 13; i++) {
+            let j = i * 5;
+            if (i == 1)
+                output += ' x ' + i + ' = ' + j + ' ';
+            else {
+                output += '5 x ' + i + ' = ' + j + ' ';
+            }
+        }
+
+        // Display the result.
+        document.getElementById('result').innerHTML = output;
+    }
+
+</script>
+</head>
+
+<body>
+    <h1>Five Times</h1>
+    <button onclick="fiveTimes()">Calculate</button>
+    <span id="result"></span>
+</body>
+</html>

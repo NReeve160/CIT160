@@ -1,0 +1,35 @@
+<!DOCTYPE HTML>
+<html lang="en-us">
+<head>
+<meta charset="utf-8">
+<title>Powers of 2</title>
+<script>
+
+    /* Input: none
+     * Processing: Go through powers of two up to 31
+     * Output: display all the powers of two
+     */
+    function powers() {
+
+        let two = 2;
+        var p = '1';
+
+
+        for (let i = 1; i < 32; i++) {
+            p += Math.pow(2, i) + ' ';
+            }
+        
+
+        // Display the result.
+        document.getElementById('result').innerHTML = p;
+    }
+
+</script>
+</head>
+
+<body>
+    <h1>Powers</h1>
+    <button onclick="powers()">Calculate</button>
+    <span id="result"></span>
+</body>
+</html>
