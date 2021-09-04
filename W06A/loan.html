@@ -1,0 +1,96 @@
+<!DOCTYPE HTML>
+<html lang="en-us">
+<head>
+<meta charset="utf-8">
+<title>Loan</title>
+<script>
+/* Input:
+ * Processing:
+ * Output:
+ */
+function doPayment() {
+    let a = parseFloat(document.getElementById('aB').value);
+    let r = parseFloat(document.getElementById('aR').value);
+    let m = parseFloat(document.getElementById('nY').value);
+    let o = parseFloat(document.getElementById('pY').value);
+
+    let payment = computePayment(a, r, m, o);
+
+    document.getElementById('payment').innerHTML = payment;
+}
+
+/* Input:
+ * Processing:
+ * Output:
+ */
+function doBalance() {
+    let b = parseFloat(document.getElementById("nD").value);
+
+    let balance = computeBalance(a, b, c, d, e, f);
+
+    document.getElementById('output').innerHTML = balance;
+
+}
+
+/* Input:
+ * Processing:
+ * Output:
+ */
+function computePayment(principal, annualRate, years, periodsPerYear) {
+    let n = years * periodsPerYear;
+    let a = principal * annualRate;
+    let b = 1 + annualRate;
+    let c = 1 - b;
+    let d = Math.pow(c,n);
+    
+
+    return e;
+}
+
+/* Input:
+ * Processing:
+ * Output:
+ */
+function computeBalance(principal, annualRate, years, periodsPerYear, 
+                        numberOfPayment, PaidToDate) {
+
+}
+
+</script>
+</head>
+
+<body style="text-align: center; font-size: xx-large;">
+    <h1>Investment Calculator</h1>
+    <table id="table" style="margin-left: auto; margin-right: auto;
+    text-align: left;">
+        <tr>
+            <td>Amount borrowed (principal)</td>
+            <td><input type="text" id="aB"></td>
+        </tr>
+        <tr>
+            <td>Annual interest rate (example: .065)</td>
+            <td><input type="text" id="aR"></td>
+        </tr>
+        <tr>
+            <td>Number of years</td>
+            <td><input type="text" id="nY"></td>
+        </tr>
+        <tr>
+            <td>Payments per year</td>
+            <td><input type="text" id="pY"></td>
+        </tr>
+        <tr>
+            <td><button onclick="doPayment()">Compute payment</button></td>
+            <td id="payment"></td>
+        </tr>
+        <tr>
+            <td>Number of payments paid to date</td>
+            <td><input type="text" id="nD"></td>
+        </tr>
+        <tr>
+            <td><button onclick="computeBalance">Compute payyoff amount</button></td>
+            <td id="output"></td>
+        </tr>
+    </table>
+</body>
+</html>
