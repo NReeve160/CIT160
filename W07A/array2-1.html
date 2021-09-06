@@ -2,10 +2,10 @@
 <html lang="en-us">
 <head>
 <meta charset="utf-8">
-<title>Array2</title>
+<title>Array 2</title>
 </head>
 <script>
-/* Defining Table
+       /* Defining Table
  * Input: no user input
  * Processing: Test the countEvens and multiply functions by calling them.
  * Output: The values returned from the countEvens and multiply functions.
@@ -31,32 +31,26 @@ function test() {
 
     // Display the output string for the user to see.
     document.getElementById('output').innerHTML = output;
-}
-
-function countEvens(list) {
-    let a = 0;
-    for (let i = 0; i < list.length; i++) {
-        if (list[i] % 2 == 0) {
-            a += 1;
+    // Counts and returns the number of even integers in an array.
+    function countEvens(list) {
+    let count = 0;  
+     for (let i = 0; i < list.length; i++) {
+            if (list[i] % 2 == 0) {count += 1}
         }
-        else {
-            a += 0;
+        return count;
+    }
+    // Multiply each element in an array by some value and return the products in an array.
+    function multiply(list, multiplier) {
+        for (let i = 0; i < list.length; i++) {
+           list[i] = list[i] * multiplier;
         }
+        return list
     }
-    return a;
 }
+    </script>
 
-function multiply(list, multiplier) {
-    let a = [];
-    for (let i = 0; i < list.length; i++) {
-        a.push(list[i] * multiplier);
-    }
-    return a;
-}
+<body>
 
-</script>
-
-<body style="font-size: xx-large;">
-    <button onclick="test()" style="font-size: xx-large;">On Click</button>
+    <button type="button" onclick="test()">Test function</button>
     <div id="output"></div>
 </body>
